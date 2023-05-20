@@ -2,7 +2,7 @@ use std::env;
 
 use reqwest::header::{HeaderMap, COOKIE};
 
-type Result<T> = std::result::Result<T, Box<dyn std::error::Error>>;
+pub type Result<T> = std::result::Result<T, Box<dyn std::error::Error>>;
 
 pub async fn get_aoc_input(day: u8) -> Result<String> {
     dotenvy::dotenv()?;
